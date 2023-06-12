@@ -10,7 +10,7 @@ This is an “Android 13 Pixel-like” dashboard based on [Rounded Dashboard by 
 # theme.yaml
 It has to look like the pixel interface, so we need to use the exact **colors** and **fonts** first.
 
-![QSPanel_white](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/f81d98c5-544e-4cb6-94f2-eddcb22a0168)![QSPanel_dark](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/20b80081-3d4a-49b3-89f2-189c08137a33)
+![QSPanel_white](qspanel_white.png)![QSPanel_dark](qspanel_dark.png)
 
 <details><summary>colors</summary>
   As you can see here, the header always stays black while the panel varies light/dark, and as can be seen, the background of the notifications is brighter     than that of the panel, both in the dark and in the light mode.
@@ -184,11 +184,11 @@ _
 
 #### Let's start with the code
 
-![header](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/625bb176-99d6-4a30-94b1-00ec9d3b8b09)
+![header](header.jpg)
 # Pill
 A good way to keep track of the garbage calendar, home alarm and current energy consumption
   
-![image](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/7eb7a8ec-b899-4d3e-8243-da0743a3b446)
+![image](pill.png)
 <details><summary>Pill code</summary>
     
   ```
@@ -416,7 +416,7 @@ Very useful because it shows at a glance the entities that are on, clicking on i
 
 I made a bigger box for important alerts.
 
-![image](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/6b93a7cd-2f50-49f2-bd6d-a3e401fe8875)
+![image](counters.png)
 
 *Put everything under ```type:horizontal-stack```*
 
@@ -547,7 +547,7 @@ Now we have to recreate the famous panel that Google has created since Android 1
 
 It can very well be done by playing with ```type: custom:stack-in-card```, the correct radius and the colors that we set at the beginning.
 
-![panel](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/a8fd2006-ac97-4fa9-bd78-c561bdcdeae0)
+![panel](panel.jpg)
 
 
 Let's start with the room card, I got the code from [here](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/82?u=arroma) and made some slight changes to meet my needs.
@@ -726,7 +726,7 @@ The ```type: custom:gap-card``` will be placed both at the beginning and at the 
 
 In the titles I use ```font-family: Poppins``` because I like it, but you can use ```font-family: Product Sans Black``` to make it more pixel-like.
 
-![graph_title](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/9572eeaf-70b2-4a3d-89f2-1bd1a3a93562)
+![graph_title](title&graph.jpg)
 
 <details><summary>Title</summary>
   
@@ -772,7 +772,7 @@ In the titles I use ```font-family: Poppins``` because I like it, but you can us
  <details><summary>Graph</summary>
   Here I'm using two stack-in-cards, note that I'm using two different background colors: var(--contrast0) and var(--contrast00), this is to give more tone to the graphs (see img).
   
-  ![image](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/5f1b3aee-c3ed-4662-be55-3ca1967035ce)
+  ![image](graph.png)
   
   
   ```
@@ -879,14 +879,15 @@ You may have noticed that I use themes in the graph card, well these are used to
   ```
   
   This theme must be placed in the theme folder ```/config/themes/sensor_color_yellow.yaml```
-  _
+
 </details>
 
-_
+
+
 
 # Something else -  animations!
 
-![opening_gate](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/2da6b8b6-67b5-4317-a86a-4b2521295c55)
+![opening_gate](gate.gif)
 
 
 A very simple animation when the car gate opens, it can be used with any entity, such as a light that turns on/off or any state change of any desired entity
