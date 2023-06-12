@@ -881,3 +881,81 @@ You may have noticed that I use themes in the graph card, well these are used to
   This theme must be placed in the theme folder ```/config/themes/sensor_color_yellow.yaml```
   _
 </details>
+
+_
+
+# Something else -  animations!
+
+![opening_gate](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/2da6b8b6-67b5-4317-a86a-4b2521295c55)
+
+
+A very simple animation when the car gate opens, it can be used with any entity, such as a light that turns on/off or any state change of any desired entity
+
+<details><summary>On/off animation code</summary>
+
+  ```
+
+          - type: custom:button-card
+            card_mod:
+              style: |
+                ha-card {
+                  transition: 300ms !important;
+                }
+            name: CANCELLO
+            icon: mdi:gate
+            entity: switch.cancello
+            tap_action:
+              action: toggle
+              haptic: heavy
+            hold_action:
+              action: more-info
+              haptic: light
+            styles:
+              grid:
+                - grid-template-areas: '"i" "n" "slider"'
+                - grid-template-columns: 1fr
+                - grid-template-rows: 1fr min-content min-content
+              card:
+                - height: 180px
+                - background: var(--contrast00)
+                - padding: 16px
+                - '--mdc-ripple-press-opacity': 0
+                - padding: 100px 0px 16px 20px
+                - font-family: Poppins
+              img_cell:
+                - justify-self: start
+                - width: 24px
+              icon:
+                - width: 24px
+                - height: 24px
+                - color: var(--contrast8)
+              name:
+                - justify-self: start
+                - font-size: 14px
+                - margin: 4px 0 12px 0
+                - color: var(--contrast8)
+                - font-family: Product Sans
+            state:
+              - value: 'on'
+                name: Aprendo..
+                styles:
+                  card:
+                    - background: var(--yellow)
+                    - border-radius: 10px
+                  icon:
+                    - color: var(--black)
+                  name:
+                    - color: var(--black)
+                    - font-family: Poppins
+              - value: 'off'
+                styles:
+                  icon:
+                    - color: var(--black)
+                  card:
+                    - background: var(--blue)
+                  name:
+                    - color: var(--black)
+                    - font-family: Poppins
+ ```
+
+</details>
