@@ -1,6 +1,6 @@
 ###### Pixel-like-dahsboard
 
-![Pixel-like dashboard](https://github.com/Arroma98/Pixel-like-dahsboard/assets/118556527/f5e59752-51af-4800-b86f-5ecb53a86b51)
+![Pixel-like dashboard](dashboard.jpg)
 
 ### What's that?
 This is an “Android 13 Pixel-like” dashboard based on [Rounded Dashboard by Leon](https://community.home-assistant.io/t/rounded-dashboard-guide/543043).
