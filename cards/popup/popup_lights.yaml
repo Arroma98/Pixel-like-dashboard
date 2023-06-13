@@ -1,0 +1,448 @@
+
+
+### Add this to your card
+### I use it in the counter sensors on the header
+tap_action:
+  haptic: light
+  action: fire-dom-event
+  browser_mod:
+    service: browser_mod.popup
+    data:
+      title: ' '
+      content:
+        type: custom:stack-in-card
+        mode: vertical
+        keep:
+          margin: true
+          border_radius: true
+          background: true
+          outer_padding: false
+        card_mod:
+          style: |
+            ha-card {
+              background-color: var(--contrast0);
+              border-radius: 25px;
+              font-family: Product Sans ;
+              }
+        cards:
+          - type: custom:gap-card
+            height: 2
+          - type: vertical-stack
+            cards:
+              - type: custom:button-card
+                name: LIGHTS 💡
+                styles:
+                  card:
+                    - background: none
+                    - box-shadow: none
+                    - padding: 30px 0px 60px 0px
+                    - '--mdc-ripple-press-opacity': 0
+                  name:
+                    - font-size: 30px
+                    - color: var(--contrast20)
+                    - font-family: Poppins
+              - square: false
+                type: grid
+                cards:
+                  - type: custom:button-card
+                    name: Light
+                    icon: mdi:lightbulb-off-outline
+                    entity: light.light
+                    tap_action:
+                      action: more-info
+                      haptic: light
+                    hold_action:
+                      action: more-info
+                      haptic: light
+                    styles:
+                      grid:
+                        - grid-template-areas: '"i" "n" "slider"'
+                        - grid-template-columns: 1fr
+                        - grid-template-rows: 1fr min-content min-content
+                      card:
+                        - background: var(--contrast00)
+                        - padding: 16px
+                        - '--mdc-ripple-press-opacity': 0
+                      img_cell:
+                        - justify-self: start
+                        - width: 24px
+                      icon:
+                        - width: 24px
+                        - height: 24px
+                        - color: var(--contrast8)
+                      name:
+                        - justify-self: start
+                        - font-size: 14px
+                        - margin: 4px 0 12px 0
+                        - color: var(--contrast8)
+                    state:
+                      - value: 'on'
+                        icon: mdi:lightbulb-on
+                        styles:
+                          card:
+                            - background: var(--yellow)
+                            - box-shadow: none
+                          icon:
+                            - color: var(--black)
+                          name:
+                            - color: var(--black)
+                      - value: 'off'
+                        icon: mdi:lightbulb-off
+                        styles:
+                          icon:
+                            - color: var(--contrast20)
+                          name:
+                            - color: var(--contrast20)
+                  - type: custom:button-card
+                    name: Lights
+                    icon: mdi:lightbulb-group-off-outline
+                    entity: light.lights
+                    tap_action:
+                      action: more-info
+                      haptic: light
+                    hold_action:
+                      action: more-info
+                      haptic: light
+                    styles:
+                      grid:
+                        - grid-template-areas: '"i" "n" "slider"'
+                        - grid-template-columns: 1fr
+                        - grid-template-rows: 1fr min-content min-content
+                      card:
+                        - background: var(--contrast00)
+                        - padding: 16px
+                        - '--mdc-ripple-press-opacity': 0
+                      img_cell:
+                        - justify-self: start
+                        - width: 24px
+                      icon:
+                        - width: 24px
+                        - height: 24px
+                        - color: var(--contrast8)
+                      name:
+                        - justify-self: start
+                        - font-size: 14px
+                        - margin: 4px 0 12px 0
+                        - color: var(--contrast8)
+                    state:
+                      - value: 'on'
+                        icon: mdi:lightbulb-group
+                        styles:
+                          card:
+                            - background: var(--yellow)
+                            - box-shadow: none
+                          icon:
+                            - color: var(--black)
+                          name:
+                            - color: var(--black)
+                      - value: 'off'
+                        icon: mdi:lightbulb-group-off
+                        styles:
+                          icon:
+                            - color: var(--contrast20)
+                          name:
+                            - color: var(--contrast20)
+                columns: 2
+              - square: false
+                type: grid
+                cards:
+                  - type: custom:button-card
+                    name: Light
+                    icon: mdi:lightbulb-off-outline
+                    entity: switch.light
+                    tap_action:
+                      action: more-info
+                      haptic: light
+                    hold_action:
+                      action: more-info
+                      haptic: light
+                    styles:
+                      grid:
+                        - grid-template-areas: '"i" "n" "slider"'
+                        - grid-template-columns: 1fr
+                        - grid-template-rows: 1fr min-content min-content
+                      card:
+                        - background: var(--contrast00)
+                        - padding: 16px
+                        - '--mdc-ripple-press-opacity': 0
+                      img_cell:
+                        - justify-self: start
+                        - width: 24px
+                      icon:
+                        - width: 24px
+                        - height: 24px
+                        - color: var(--contrast8)
+                      name:
+                        - justify-self: start
+                        - font-size: 14px
+                        - margin: 4px 0 12px 0
+                        - color: var(--contrast8)
+                    state:
+                      - value: 'on'
+                        icon: mdi:coach-lamp
+                        styles:
+                          card:
+                            - background: var(--yellow)
+                            - box-shadow: none
+                          icon:
+                            - color: var(--black)
+                          name:
+                            - color: var(--black)
+                      - value: 'off'
+                        icon: mdi:lightbulb-off
+                        styles:
+                          icon:
+                            - color: var(--contrast20)
+                          name:
+                            - color: var(--contrast20)
+                  - type: custom:button-card
+                    name: Light
+                    icon: mdi:coach-lamp
+                    entity: light.light
+                    tap_action:
+                      action: more-info
+                      haptic: light
+                    hold_action:
+                      action: more-info
+                      haptic: light
+                    styles:
+                      grid:
+                        - grid-template-areas: '"i" "n" "slider"'
+                        - grid-template-columns: 1fr
+                        - grid-template-rows: 1fr min-content min-content
+                      card:
+                        - background: var(--contrast00)
+                        - padding: 16px
+                        - '--mdc-ripple-press-opacity': 0
+                      img_cell:
+                        - justify-self: start
+                        - width: 24px
+                      icon:
+                        - width: 24px
+                        - height: 24px
+                        - color: var(--contrast8)
+                      name:
+                        - justify-self: start
+                        - font-size: 14px
+                        - margin: 4px 0 12px 0
+                        - color: var(--contrast8)
+                    state:
+                      - value: 'on'
+                        icon: mdi:coach-lamp
+                        styles:
+                          card:
+                            - background: var(--yellow)
+                            - box-shadow: none
+                          icon:
+                            - color: var(--black)
+                          name:
+                            - color: var(--black)
+                      - value: 'off'
+                        icon: mdi:lightbulb-off
+                        styles:
+                          icon:
+                            - color: var(--contrast20)
+                          name:
+                            - color: var(--contrast20)
+                  - type: custom:button-card
+                    name: Light
+                    icon: mdi:lightbulb-spot-off
+                    entity: light.light
+                    tap_action:
+                      action: more-info
+                      haptic: light
+                    hold_action:
+                      action: more-info
+                      haptic: light
+                    styles:
+                      grid:
+                        - grid-template-areas: '"i" "n" "slider"'
+                        - grid-template-columns: 1fr
+                        - grid-template-rows: 1fr min-content min-content
+                      card:
+                        - background: var(--contrast00)
+                        - padding: 16px
+                        - '--mdc-ripple-press-opacity': 0
+                      img_cell:
+                        - justify-self: start
+                        - width: 24px
+                      icon:
+                        - width: 24px
+                        - height: 24px
+                        - color: var(--contrast8)
+                      name:
+                        - justify-self: start
+                        - font-size: 14px
+                        - margin: 4px 0 12px 0
+                        - color: var(--contrast8)
+                    state:
+                      - value: 'on'
+                        icon: mdi:lightbulb-spot
+                        styles:
+                          card:
+                            - background: var(--yellow)
+                            - box-shadow: none
+                          icon:
+                            - color: var(--black)
+                          name:
+                            - color: var(--black)
+                      - value: 'off'
+                        icon: mdi:lightbulb-spot-off
+                        styles:
+                          icon:
+                            - color: var(--contrast20)
+                          name:
+                            - color: var(--contrast20)
+                  - type: custom:button-card
+                    name: Light
+                    icon: mdi:lightbulb-question
+                    entity: light.light
+                    tap_action:
+                      action: more-info
+                      haptic: light
+                    hold_action:
+                      action: more-info
+                      haptic: light
+                    styles:
+                      grid:
+                        - grid-template-areas: '"i" "n" "slider"'
+                        - grid-template-columns: 1fr
+                        - grid-template-rows: 1fr min-content min-content
+                      card:
+                        - background: var(--contrast00)
+                        - padding: 16px
+                        - '--mdc-ripple-press-opacity': 0
+                      img_cell:
+                        - justify-self: start
+                        - width: 24px
+                      icon:
+                        - width: 24px
+                        - height: 24px
+                        - color: var(--contrast8)
+                      name:
+                        - justify-self: start
+                        - font-size: 14px
+                        - margin: 4px 0 12px 0
+                        - color: var(--contrast8)
+                    state:
+                      - value: 'on'
+                        icon: mdi:lightbulb-on
+                        styles:
+                          card:
+                            - background: var(--yellow)
+                            - box-shadow: none
+                          icon:
+                            - color: var(--black)
+                          name:
+                            - color: var(--black)
+                      - value: 'off'
+                        icon: mdi:lightbulb-off
+                        styles:
+                          icon:
+                            - color: var(--contrast20)
+                          name:
+                            - color: var(--contrast20)
+                  - type: custom:button-card
+                    name: Light
+                    icon: mdi:lightbulb-question
+                    entity: light.light
+                    tap_action:
+                      action: more-info
+                      haptic: light
+                    hold_action:
+                      action: more-info
+                      haptic: light
+                    styles:
+                      grid:
+                        - grid-template-areas: '"i" "n" "slider"'
+                        - grid-template-columns: 1fr
+                        - grid-template-rows: 1fr min-content min-content
+                      card:
+                        - background: var(--contrast00)
+                        - padding: 16px
+                        - '--mdc-ripple-press-opacity': 0
+                      img_cell:
+                        - justify-self: start
+                        - width: 24px
+                      icon:
+                        - width: 24px
+                        - height: 24px
+                        - color: var(--contrast8)
+                      name:
+                        - justify-self: start
+                        - font-size: 14px
+                        - margin: 4px 0 12px 0
+                        - color: var(--contrast8)
+                    state:
+                      - value: 'on'
+                        icon: mdi:lightbulb-on
+                        styles:
+                          card:
+                            - background: var(--yellow)
+                            - box-shadow: none
+                          icon:
+                            - color: var(--black)
+                          name:
+                            - color: var(--black)
+                      - value: 'off'
+                        icon: mdi:lightbulb-off
+                        styles:
+                          icon:
+                            - color: var(--contrast20)
+                          name:
+                            - color: var(--contrast20)
+                  - type: custom:button-card
+                    name: Light
+                    icon: mdi:floor-lamp-outline
+                    entity: switch.light
+                    tap_action:
+                      action: more-info
+                      haptic: light
+                    hold_action:
+                      action: more-info
+                      haptic: light
+                    styles:
+                      grid:
+                        - grid-template-areas: '"i" "n" "slider"'
+                        - grid-template-columns: 1fr
+                        - grid-template-rows: 1fr min-content min-content
+                      card:
+                        - background: var(--contrast00)
+                        - padding: 16px
+                        - '--mdc-ripple-press-opacity': 0
+                        - height: 100%
+                      img_cell:
+                        - justify-self: start
+                        - width: 24px
+                      icon:
+                        - width: 24px
+                        - height: 24px
+                        - color: var(--contrast8)
+                      name:
+                        - justify-self: start
+                        - font-size: 14px
+                        - margin: 4px 0 12px 0
+                        - color: var(--contrast8)
+                    state:
+                      - value: 'on'
+                        icon: mdi:floor-lamp
+                        styles:
+                          card:
+                            - background: var(--yellow)
+                            - box-shadow: none
+                          icon:
+                            - color: var(--black)
+                          name:
+                            - color: var(--black)
+                      - value: 'off'
+                        icon: mdi:floor-lamp-outline
+                        styles:
+                          icon:
+                            - color: var(--contrast20)
+                          name:
+                            - color: var(--contrast20)
+                columns: 3
+              - type: custom:gap-card
+                height: 2
+          - type: custom:gap-card
+            height: 2

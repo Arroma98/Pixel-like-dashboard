@@ -1,0 +1,37 @@
+
+
+      - type: custom:button-card
+        name: Text
+        label: '?'
+        show_label: true
+        entity: input_boolean.x
+        show_icon: false
+        styles:
+          card:
+            - color: var(--contrast18)
+            - border-radius: 24px
+            - background: none
+            - margin-top: 0px
+            - padding: 8px 0px
+            - border: 2px solid var(--contrast20)
+            - box-shadow: none
+          label:
+            - font-family: Poppins
+            - font-size: 20px
+          name:
+            - font-family: Product Sans
+            - font-size: 16px
+        tap_action:
+          haptic: light
+          action: more-info
+        state:
+          - value: 'on'
+            label: Something for the on state
+            styles:
+              label:
+                - color: var(--red)
+          - value: 'off'
+            label: Something for the off state
+            styles:
+              label:
+                - color: var(--blue)

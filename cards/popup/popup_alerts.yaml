@@ -1,0 +1,132 @@
+
+
+### Add this to your card
+### I use it on the alert card in the header
+tap_action:
+  haptic: light
+  action: fire-dom-event
+  browser_mod:
+    service: browser_mod.popup
+    data:
+      title: ' '
+      content:
+        type: custom:stack-in-card
+        mode: vertical
+        keep:
+          margin: true
+          border_radius: true
+          background: true
+          outer_padding: false
+        card_mod:
+          style: |
+            ha-card {
+              background-color: var(--contrast0);
+              border-radius: 25px;
+              font-family: Product Sans ;
+              }
+        cards:
+          - type: custom:gap-card
+            height: 2
+          - type: conditional
+            conditions:
+              - entity: sensor.alerts
+                state_not: '0'
+            card:
+              type: custom:button-card
+              name: ALERTS 🔔
+              styles:
+                card:
+                  - background: none
+                  - box-shadow: none
+                  - padding: 30px 0% 60px 0px
+                  - '--mdc-ripple-press-opacity': 0
+                name:
+                  - font-size: 30px
+                  - color: var(--contrast20)
+                  - font-family: Poppins
+          - type: conditional
+            conditions:
+              - entity: sensor.alerts
+                state: '0'
+            card:
+              type: custom:button-card
+              name: |
+                NO ALERTS!
+                🙂
+              styles:
+                card:
+                  - background: none
+                  - box-shadow: none
+                  - padding: 30px 0% 60px 0px
+                  - '--mdc-ripple-press-opacity': 0
+                  - font-family: Poppins
+                name:
+                  - font-size: 30px
+                  - color: var(--contrast20)
+          - type: conditional
+            conditions:
+              - entity: light.light
+                state: 'on'
+              - entity: device_tracker.person1
+                state_not: home
+              - entity: device_tracker.person2
+                state_not: home
+            card:
+              type: custom:button-card
+              name: LIGHT
+              label: ON
+              show_label: true
+              entity: light.light
+              show_icon: false
+              styles:
+                card:
+                  - color: var(--contrast20)
+                  - border-radius: 24px
+                  - background-color: rgba(var(--yellow-rgb),0.1)
+                  - margin-top: 0px
+                  - padding: 8px 0px
+                  - border: 2px solid var(--yellow)
+                  - box-shadow: none
+                label:
+                  - font-family: Poppins
+                  - font-size: 20px
+                name:
+                  - font-family: Product Sans
+                  - font-size: 16px
+              tap_action:
+                haptic: light
+                action: more-info
+          - type: conditional
+            conditions:
+              - entity: input_boolean.climate_auto
+                state: 'off'
+            card:
+              type: custom:button-card
+              name: CLIMATE
+              label: MANUAL
+              show_label: true
+              entity: input_boolean.climate_auto
+              show_icon: false
+              styles:
+                card:
+                  - color: var(--contrast20)
+                  - border-radius: 24px
+                  - background: none
+                  - margin-top: 0px
+                  - padding: 8px 0px
+                  - border: 2px solid var(--contrast20)
+                  - box-shadow: none
+                label:
+                  - font-family: Poppins
+                  - font-size: 20px
+                name:
+                  - font-family: Product Sans
+                  - font-size: 16px
+              tap_action:
+                haptic: light
+                action: more-info
+
+### etc etc
+
+          - type: custom:gap-card
+            height: 2

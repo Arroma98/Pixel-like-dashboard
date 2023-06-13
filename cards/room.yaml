@@ -1,0 +1,122 @@
+
+type: grid
+square: false 
+columns: 2
+cards:
+  - type: custom:button-card
+    entity: climate.mitsubishi
+    icon: mdi:sofa
+    name: Living room
+    tap_action:
+      action: navigate
+      navigation_path: /lovelace/living_room
+      haptic: light
+    state:
+      - value: 'on'
+        styles:
+          card:
+            - background: rgba(var(--blue-rgb), 1)
+          icon:
+            - color: var(--black)
+          name:
+            - color: var(--black)
+        icon: mdi:fan
+      - value: dry
+        styles:
+          card:
+            - background: rgba(var(--blue-rgb), 1)
+          icon:
+            - color: var(--black)
+          name:
+            - color: var(--black)
+        icon: mdi:fan
+      - value: cool
+        styles:
+          card:
+            - background: rgba(var(--blue-rgb), 1)
+          icon:
+            - color: var(--black)
+          name:
+            - color: var(--black)
+        icon: mdi:snowflake
+      - value: heat
+        styles:
+          card:
+            - background: rgba(var(--orange-rgb), 1)
+          icon:
+            - color: var(--black)
+          name:
+            - color: var(--black)
+        icon: mdi:fire
+    styles:
+      grid:
+        - grid-template-areas: '"i temp" "n hum"'
+        - grid-template-columns: 1fr 1fr
+        - grid-template-rows: 1fr min-content min-content
+      card:
+        - background: var(--contrast00)
+        - padding: 10px
+        - '--mdc-ripple-press-opacity': 0
+        - box-shadow: none
+        - height: 96px
+      img_cell:
+        - justify-self: start
+        - width: 24px
+        - margin: 10px
+      icon:
+        - width: 24px
+        - height: 24px
+        - color: var(--contrast18)
+      name:
+        - justify-self: start
+        - font-size: 14px
+        - margin: 10px
+        - color: var(--contrast18)
+        - font-family: Product Sans
+      custom_fields:
+        temp:
+          - align-self: start
+          - justify-self: end
+          - font-size: 12px
+          - font-weight: 500
+          - margin: 2px 0px 10px 0px
+          - color: grey
+          - font-family: Product Sans
+          - background-color: var(--contrast0)
+          - border-radius: 100px
+          - padding: 6px
+        hum:
+          - align-self: start
+          - justify-self: end
+          - font-size: 12px
+          - font-weight: 500
+          - margin: 2px 0px 10px 0px
+          - color: grey
+          - font-family: Product Sans
+          - background-color: var(--contrast0)
+          - border-radius: 100px
+          - padding: 6px
+    custom_fields:
+      temp: |
+        [[[
+        return `<ha-icon
+          icon="mdi:thermometer"
+          style="width: 18px; height: 18px; color: grey;">
+          </ha-icon><span>${parseFloat(states['sensor.temp'].state).toFixed(0)}°C</span>`
+        ]]]
+      hum: |
+        [[[
+        return `<ha-icon
+          icon="mdi:water-percent"
+          style="width: 18px; height: 18px; color: grey;">
+          </ha-icon> <span>${parseFloat(states['sensor.hum'].state).toFixed(0)}%</span>`
+        ]]]
+    card_mod:
+      style: |
+        ha-card:active {
+          box-shadow: none;
+          transform: scale(0.96);
+          transition: 200ms !important;
+          border-radius: 20px;
+          transform-origin: center;
+          }

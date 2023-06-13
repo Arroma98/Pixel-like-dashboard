@@ -1,0 +1,29 @@
+
+type: custom:mushroom-chips-card
+chips:
+  - type: template
+    double_tap_action:
+      action: none
+    picture: /local/person.jpg
+    content: |-
+      {% if is_state('device_tracker.person', 'home') %}
+      Home
+      {% elif is_state('sensor.person_phone_activity','in_vehicle')%}
+      Car
+      {% else %}
+      {% endif %}
+    hold_action:
+      action: none
+    tap_action:
+      action: none
+    card_mod:
+      style: |
+        ha-card {
+          {% if is_state('device_tracker.person', 'home') %}
+          font-family: Poppins !important;
+          --chip-background: var(--green) !important;
+          {% elif is_state('sensor.person_phone_activity','in_vehicle')%}
+          --chip-background: var(--blue) !important;
+          {% else %}
+          {% endif %}
+          }

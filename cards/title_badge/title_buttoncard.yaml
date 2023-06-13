@@ -1,0 +1,45 @@
+
+
+### Here I use a button card for the badge
+
+type: vertical-stack
+cards:
+  - type: custom:button-card
+    name: TITLE
+    styles:
+      card:
+        - background: none
+        - box-shadow: none
+        - padding: 70px 0px 70px 0px
+        - '--mdc-ripple-press-opacity': 0
+      name:
+        - font-size: 32px
+        - color: var(--white0)
+        - font-family: Poppins
+  - square: false
+    type: grid
+    cards:
+      - type: custom:button-card
+        name: Name
+        label: '[[[return states["sensor.sensor"].state + " unit"]]]'
+        show_label: true
+        show_icon: false
+        entity: sensor.sensor
+        styles:
+          grid:
+            - grid-template-areas: '"n gutter l"'
+            - grid-template-columns: min-content 5px min-content
+            - grid-template-rows: min-content
+          card:
+            - padding: 6px 10px
+            - font-size: 12px
+            - line-height: 18px
+            - font-weight: 500
+            - background: var(--contrast0)
+          name:
+            - color: var(--contrast10)
+            - font-family: Product Sans
+          label:
+            - color: var(--contrast18)
+            - font-family: Poppins
+    columns: 2

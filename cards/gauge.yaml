@@ -1,0 +1,59 @@
+
+
+### This is a simple gauge but with forced white text to always be visible on the black background
+type: gauge
+theme: minimalist-mobile-tapbar
+min: 0
+needle: true
+segments:
+  - from: 5800
+    color: '#76e887'
+  - from: 5500
+    color: '#7ae876'
+  - from: 5000
+    color: '#86e876'
+  - from: 4500
+    color: '#89e876'
+  - from: 4000
+    color: '#a0e876'
+  - from: 3600
+    color: '#b9e876'
+  - from: 3100
+    color: '#e0e876'
+  - from: 2900
+    color: '#e8df76'
+  - from: 2600
+    color: '#e8df76'
+  - from: 2300
+    color: '#e8ca76'
+  - from: 1900
+    color: '#e8c076'
+  - from: 1600
+    color: '#e8b176'
+  - from: 1400
+    color: '#e89e76'
+  - from: 1200
+    color: '#e88d76'
+  - from: 1000
+    color: '#e88276'
+  - from: 800
+    color: '#e87676'
+  - from: 600
+    color: '#e67373'
+  - from: 400
+    color: '#d66b6b'
+  - from: 200
+    color: '#c26161'
+  - from: 0
+    color: '#a35252'
+max: 6500
+entity: sensor.energy
+name: Energy
+card_mod:
+  style: |
+    ha-card {
+    box-shadow: none;
+      background: rgba(0,0,0,0);
+      font-family: Product Sans Light !important;
+      --primary-text-color: var(--white0);
+    }

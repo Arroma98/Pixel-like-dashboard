@@ -1,0 +1,47 @@
+
+
+### Here I use mushroom chips card for the badge
+type: vertical-stack
+cards:
+  - type: custom:button-card
+    name: TITLE
+    styles:
+      card:
+        - background: none
+        - box-shadow: none
+        - padding: 70px 0px 70px 0px
+        - '--mdc-ripple-press-opacity': 0
+      name:
+        - font-size: 32px
+        - color: var(--white0)
+        - font-family: Poppins
+  - type: custom:mushroom-chips-card
+    chips:
+      - type: entity
+        entity: sensor.sensor
+        double_tap_action:
+          action: none
+        icon: mdi:solar-power-variant
+        content_info: state
+        tap_action:
+          action: more-info
+        hold_action:
+          action: none
+      - type: entity
+        entity: sensor.sensor
+        double_tap_action:
+          action: none
+        icon: mdi:solar-power-variant
+        content_info: state
+        tap_action:
+          action: more-info
+        hold_action:
+          action: none
+    card_mod:
+      style: |
+        ha-card {
+          --chip-background: var(--contrast0);
+          --primary-text-color: var(--contrast18);
+          font-family: Product Sans;
+          }
+    alignment: start
