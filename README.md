@@ -1,6 +1,6 @@
 ###### Pixel-like-dahsboard
 
-![Pixel-like dashboard](dashboard.jpg)
+![Dashboard](img/dashboard.jpg)
 
 ### What's that?
 This is an “Android 13 Pixel-like” dashboard based on [Rounded Dashboard by Leon](https://community.home-assistant.io/t/rounded-dashboard-guide/543043).
@@ -10,7 +10,7 @@ This is an “Android 13 Pixel-like” dashboard based on [Rounded Dashboard by 
 # theme.yaml
 It has to look like the pixel interface, so we need to use the exact **colors** and **fonts** first.
 
-![QSPanel_white](qspanel_white.png)![QSPanel_dark](qspanel_dark.png)
+![QSPanel_white](img/qspanel_white.png)![QSPanel_dark](img/qspanel_dark.png)
 
 <details><summary>colors</summary>
   As you can see here, the header always stays black while the panel varies light/dark, and as can be seen, the background of the notifications is brighter     than that of the panel, both in the dark and in the light mode.
@@ -184,11 +184,11 @@ _
 
 #### Let's start with the code
 
-![header](header.jpg)
+![header](img/header.jpg)
 # Pill
 A good way to keep track of the garbage calendar, home alarm and current energy consumption
   
-![image](pill.png)
+![image](img/pill.png)
 <details><summary>Pill code</summary>
     
   ```
@@ -416,7 +416,7 @@ Very useful because it shows at a glance the entities that are on, clicking on i
 
 I made a bigger box for important alerts.
 
-![image](counters.png)
+![image](img/counters.png)
 
 *Put everything under ```type:horizontal-stack```*
 
@@ -547,7 +547,7 @@ Now we have to recreate the famous panel that Google has created since Android 1
 
 It can very well be done by playing with ```type: custom:stack-in-card```, the correct radius and the colors that we set at the beginning.
 
-![panel](panel.jpg)
+![panel](img/panel.jpg)
 
 
 Let's start with the room card, I got the code from [here](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/82?u=arroma) and made some slight changes to meet my needs.
@@ -726,7 +726,7 @@ The ```type: custom:gap-card``` will be placed both at the beginning and at the 
 
 In the titles I use ```font-family: Poppins``` because I like it, but you can use ```font-family: Product Sans Black``` to make it more pixel-like.
 
-![graph_title](title&graph.jpg)
+![graph_title](img/title&graph.jpg)
 
 <details><summary>Title</summary>
   
@@ -772,7 +772,7 @@ In the titles I use ```font-family: Poppins``` because I like it, but you can us
  <details><summary>Graph</summary>
   Here I'm using two stack-in-cards, note that I'm using two different background colors: var(--contrast0) and var(--contrast00), this is to give more tone to the graphs (see img).
   
-  ![image](graph.png)
+  ![image](img/graph.png)
   
   
   ```
@@ -887,7 +887,7 @@ You may have noticed that I use themes in the graph card, well these are used to
 
 # Something else -  animations!
 
-![opening_gate](gate.gif)
+![opening_gate](img/gate.gif)
 
 
 A very simple animation when the car gate opens, it can be used with any entity, such as a light that turns on/off or any state change of any desired entity
