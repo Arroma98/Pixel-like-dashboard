@@ -4,7 +4,7 @@ square: false
 columns: 2
 cards:
   - type: custom:button-card
-    entity: climate.mitsubishi
+    entity: climate.climate
     icon: mdi:sofa
     name: Living room
     tap_action:
