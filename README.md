@@ -1,4 +1,4 @@
-###### Pixel-like-dahsboard
+###### Pixel-like-dashboard
 
 ![Dashboard](img/dashboard_all.jpg)
 
