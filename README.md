@@ -7,7 +7,7 @@ This is an “Android 13 Pixel-like” dashboard based on [Rounded Dashboard by 
 ###### NB - I'm not a developer or anything, I'm a mere mortal who until recently was unknown to this whole world and is getting to know it from scratch.
 
 
-## _________
+### _________
 
 
 # theme.yaml
@@ -185,7 +185,7 @@ It has to look like the pixel interface, so we need to use the exact **colors** 
   
   </details>
 
-## _________
+### _________
 
 ### Let's start with the dashboard:
 
@@ -420,7 +420,7 @@ A good way to keep track of the garbage calendar, home alarm and current energy 
     
 </details>
 
-## _________
+### _________
 
 # Counter sensors
 Very useful because it shows at a glance the entities that are on, clicking on it opens a popup showing all the entities of that category.
@@ -554,7 +554,7 @@ I made a bigger box for important alerts.
   
 </details>
 
-## _________
+### _________
 
 # Panel
 Now we have to recreate the famous panel that Google has created since Android 12.
@@ -737,7 +737,7 @@ The ```type: custom:gap-card``` will be placed both at the beginning and at the 
   ```
 </details>
 
-## _________
+### _________
 
 # Title and graph
 
@@ -899,7 +899,7 @@ In the titles I use ```font-family: Poppins``` because I like it, but you can us
 
 </details>
 
-## _________
+### _________
 
 # Something else -  animations!
 
@@ -977,7 +977,7 @@ A very simple animation when the car gate opens, it can be used with any entity,
 
 </details>
 
-## _________
+### _________
 
 [Card mod](https://github.com/thomasloven/lovelace-card-mod)
 
