@@ -4,7 +4,8 @@
 
 ### What's that?
 This is an “Android 13 Pixel-like” dashboard based on [Rounded Dashboard by Leon](https://community.home-assistant.io/t/rounded-dashboard-guide/543043).
-###### NB - I'm not a developer or anything, I'm a mere mortal who until recently was unknown to this whole world and is getting to know it from scratch.
+###### NB.1 - I'm not a developer or anything, I'm a mere mortal who until recently was unknown to this whole world and is getting to know it from scratch.
+###### NB.2 - What I did is put together cards found in the [forum](https://community.home-assistant.io/latest), modifying some more and some less, aiming to mix it all up to make pixel rom design in my home assistant dashboard.
 
 
 ### _________
@@ -12,6 +13,8 @@ This is an “Android 13 Pixel-like” dashboard based on [Rounded Dashboard by 
 
 # theme.yaml
 It has to look like the pixel interface, so we need to use the exact **colors** and **fonts** first.
+
+###### You can find the full theme in the _themes folder_
 
 <img src="img/theme.jpg" width="50%"><img src="img/bottom_bar.jpg" width="50%">
 
@@ -41,6 +44,8 @@ It has to look like the pixel interface, so we need to use the exact **colors** 
         contrast0: var(--white0)
         contrast00: var(--white00)
    ```
+  
+  #### **black amoled background**
   
   In addition to this, to have a correct display of the colors and keep the **black amoled background** even in white mode, we have to set the theme colors in this way:
    ```
@@ -196,7 +201,7 @@ It has to look like the pixel interface, so we need to use the exact **colors** 
 # Pill
 A good way to keep track of the garbage calendar, home alarm and current energy consumption
 
-<img src="img/pill.png" width="30%">
+<img src="img/pill.png" width="50%">
 
 <details><summary>Pill code</summary>
     
@@ -427,7 +432,7 @@ Very useful because it shows at a glance the entities that are on, clicking on i
 
 I made a bigger box for important alerts.
 
-<img src="img/counter_sensors.jpg" width="30%">
+<img src="img/counter_sensors.jpg" width="50%">
 
 *Put everything under ```type:horizontal-stack```*
 
@@ -561,7 +566,7 @@ Now we have to recreate the famous panel that Google has created since Android 1
 
 It can very well be done by playing with ```type: custom:stack-in-card```, the correct radius and the colors that we set at the beginning.
 
-<img src="img/panel.jpg" width="30%">
+<img src="img/panel.jpg" width="50%">
 
 
 Let's start with the room card, I got the code from [here](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/82?u) and made some slight changes to meet my needs.
@@ -569,7 +574,7 @@ Let's start with the room card, I got the code from [here](https://community.hom
 Let's put them in a 2-column grid and place it under ```type: custom:stack-in-card```
 <details><summary>Room card</summary>
 
-  <img src="img/room_cards.jpg" width="30%">
+  <img src="img/room_cards.jpg" width="50%">
 
   ```
       - type: custom:stack-in-card
@@ -743,7 +748,7 @@ The ```type: custom:gap-card``` will be placed both at the beginning and at the 
 
 In the titles I use ```font-family: Poppins``` because I like it, but you can use ```font-family: Product Sans Black``` to make it more pixel-like.
 
-<img src="img/title&graph.jpg" width="30%">
+<img src="img/title&graph.jpg" width="50%">
 
 <details><summary>Title</summary>
   
@@ -789,7 +794,7 @@ In the titles I use ```font-family: Poppins``` because I like it, but you can us
  <details><summary>Graph</summary>
   Here I'm using two stack-in-cards, note that I'm using two different background colors: var(--contrast0) and var(--contrast00), this is to give more tone to the graphs (see img).
   
-  <img src="img/graph.png" width="30%">
+  <img src="img/graph.png" width="50%">
   
   
   ```
@@ -901,11 +906,60 @@ In the titles I use ```font-family: Poppins``` because I like it, but you can us
 
 ### _________
 
+# Person
+
+Here I use mushroom chips cards with card_mod.
+
+<img src="img/person.png" width="50%">
+
+######  Away - no text, pixel white background
+######  At home - "At home", green background, Poppins font
+######  Driving - "Car", blue background, Poppins font
+
+<details><summary>Code</summary>
+  
+  ```
+  type: custom:mushroom-chips-card
+  chips:
+    - type: template
+      double_tap_action:
+        action: none
+      picture: /local/person.jpg
+      content: |-
+        {% if is_state('device_tracker.person', 'home') %}
+        Home
+        {% elif is_state('sensor.person_phone_activity','in_vehicle')%}
+        Car
+        {% else %}
+        {% endif %}
+      hold_action:
+        action: none
+      tap_action:
+        action: none
+      card_mod:
+        style: |
+          ha-card {
+            {% if is_state('device_tracker.person', 'home') %}
+            font-family: Poppins !important;
+            --chip-background: var(--green) !important;
+            {% elif is_state('sensor.person_phone_activity','in_vehicle')%}
+            --chip-background: var(--blue) !important;
+            {% else %}
+            {% endif %}
+            }
+  ```
+  
+</details>
+
+
+
+### _________
+
 # Something else -  animations!
 
 A very simple animation when the car gate opens, it can be used with any entity, such as a light that turns on/off or any state change of any desired entity
 
-<img src="img/gate.gif" width="30%">
+<img src="img/gate.gif" width="50%">
 
 
 <details><summary>On/off animation code</summary>
