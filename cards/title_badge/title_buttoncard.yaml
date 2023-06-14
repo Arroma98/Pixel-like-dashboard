@@ -1,7 +1,4 @@
-
-
 ### Here I use a button card for the badge
-
 type: vertical-stack
 cards:
   - type: custom:button-card
