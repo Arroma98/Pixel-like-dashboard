@@ -562,7 +562,7 @@ I made a bigger box for important alerts.
 ### _________
 
 # Panel
-Now we have to recreate the famous panel that Google has created since Android 12.
+Now we have to recreate the famous notification panel that Google has created since Android 12.
 
 It can very well be done by playing with ```type: custom:stack-in-card```, the correct radius and the colors that we set at the beginning.
 
