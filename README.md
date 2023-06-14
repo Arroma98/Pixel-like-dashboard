@@ -978,3 +978,13 @@ A very simple animation when the car gate opens, it can be used with any entity,
 </details>
 
 ## _________
+
+[Card mod](https://github.com/thomasloven/lovelace-card-mod)
+
+[Bar card](https://github.com/custom-cards/bar-card)
+
+[Stack in card](https://github.com/custom-cards/stack-in-card)
+
+[Mushroom](https://github.com/piitaya/lovelace-mushroom)
+
+[Fontawesome](https://github.com/thomasloven/hass-fontawesome)
