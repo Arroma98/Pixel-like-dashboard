@@ -1033,12 +1033,20 @@ A very simple animation when the car gate opens, it can be used with any entity,
 
 ### _________
 
-[Card mod](https://github.com/thomasloven/lovelace-card-mod)
+<details><summary>Credits</summary>
+  
+  [Rounded Dashboard by Leon](https://community.home-assistant.io/t/rounded-dashboard-guide/543043)
 
-[Bar card](https://github.com/custom-cards/bar-card)
+  [Card mod](https://github.com/thomasloven/lovelace-card-mod)
 
-[Stack in card](https://github.com/custom-cards/stack-in-card)
+  [Bar card](https://github.com/custom-cards/bar-card)
 
-[Mushroom](https://github.com/piitaya/lovelace-mushroom)
+  [Stack in card](https://github.com/custom-cards/stack-in-card)
 
-[Fontawesome](https://github.com/thomasloven/hass-fontawesome)
+  [Mushroom](https://github.com/piitaya/lovelace-mushroom)
+
+  [Fontawesome](https://github.com/thomasloven/hass-fontawesome)
+  
+  All the people in the forum publish their ideas and work.
+
+</details>
