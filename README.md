@@ -1,16 +1,21 @@
 ###### Pixel-like-dahsboard
 
-![Dashboard](img/dashboard.jpg)
+![Dashboard](img/dashboard_all.jpg)
 
 ### What's that?
 This is an “Android 13 Pixel-like” dashboard based on [Rounded Dashboard by Leon](https://community.home-assistant.io/t/rounded-dashboard-guide/543043).
 ###### NB - I'm not a developer or anything, I'm a mere mortal who until recently was unknown to this whole world and is getting to know it from scratch.
 
 
+## _________
+
+
 # theme.yaml
 It has to look like the pixel interface, so we need to use the exact **colors** and **fonts** first.
 
-![QSPanel_white](img/qspanel_white.png)![QSPanel_dark](img/qspanel_dark.png)
+<img src="img/theme.jpg" width="50%"><img src="img/bottom_bar.jpg" width="50%">
+
+##### Add these codes to your theme:
 
 <details><summary>colors</summary>
   As you can see here, the header always stays black while the panel varies light/dark, and as can be seen, the background of the notifications is brighter     than that of the panel, both in the dark and in the light mode.
@@ -180,15 +185,19 @@ It has to look like the pixel interface, so we need to use the exact **colors** 
   
   </details>
 
-_
+## _________
 
-#### Let's start with the code
+### Let's start with the dashboard:
 
-![header](img/header.jpg)
+###### _These are examples of the main cards that I use in my dashboard, in the "cards" folder you will also find the codes of other cards._
+
+<img src="img/header2.jpg" width="70%">
+
 # Pill
 A good way to keep track of the garbage calendar, home alarm and current energy consumption
-  
-![image](img/pill.png)
+
+<img src="img/pill.png" width="30%">
+
 <details><summary>Pill code</summary>
     
   ```
@@ -411,16 +420,20 @@ A good way to keep track of the garbage calendar, home alarm and current energy 
     
 </details>
 
+## _________
+
 # Counter sensors
 Very useful because it shows at a glance the entities that are on, clicking on it opens a popup showing all the entities of that category.
 
 I made a bigger box for important alerts.
 
-![image](img/counters.png)
+<img src="img/counter_sensors.jpg" width="30%">
 
 *Put everything under ```type:horizontal-stack```*
 
 <details><summary>Alert box code</summary>
+
+ Card taken from [here](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/156?u)
   
   ```
     type: custom:button-card
@@ -541,19 +554,22 @@ I made a bigger box for important alerts.
   
 </details>
 
+## _________
 
 # Panel
 Now we have to recreate the famous panel that Google has created since Android 12.
 
 It can very well be done by playing with ```type: custom:stack-in-card```, the correct radius and the colors that we set at the beginning.
 
-![panel](img/panel.jpg)
+<img src="img/panel.jpg" width="30%">
 
 
-Let's start with the room card, I got the code from [here](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/82?u=arroma) and made some slight changes to meet my needs.
+Let's start with the room card, I got the code from [here](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/82?u) and made some slight changes to meet my needs.
 
 Let's put them in a 2-column grid and place it under ```type: custom:stack-in-card```
 <details><summary>Room card</summary>
+
+  <img src="img/room_cards.jpg" width="30%">
 
   ```
       - type: custom:stack-in-card
@@ -721,12 +737,13 @@ The ```type: custom:gap-card``` will be placed both at the beginning and at the 
   ```
 </details>
 
+## _________
 
 # Title and graph
 
 In the titles I use ```font-family: Poppins``` because I like it, but you can use ```font-family: Product Sans Black``` to make it more pixel-like.
 
-![graph_title](img/title&graph.jpg)
+<img src="img/title&graph.jpg" width="30%">
 
 <details><summary>Title</summary>
   
@@ -772,7 +789,7 @@ In the titles I use ```font-family: Poppins``` because I like it, but you can us
  <details><summary>Graph</summary>
   Here I'm using two stack-in-cards, note that I'm using two different background colors: var(--contrast0) and var(--contrast00), this is to give more tone to the graphs (see img).
   
-  ![image](img/graph.png)
+  <img src="img/graph.png" width="30%">
   
   
   ```
@@ -868,10 +885,9 @@ In the titles I use ```font-family: Poppins``` because I like it, but you can us
   ```
 
   </details>
-  
-You may have noticed that I use themes in the graph card, well these are used to change the colors of the graph.
 
-<details><summary>Here's an example</summary>
+
+<details><summary>Graph color theme</summary>
 
   ```
     sensor_color_yellow:
@@ -879,18 +895,18 @@ You may have noticed that I use themes in the graph card, well these are used to
   ```
   
   This theme must be placed in the theme folder ```/config/themes/sensor_color_yellow.yaml```
+  ###### _You will find more in the theme folder._
 
 </details>
 
-
-
+## _________
 
 # Something else -  animations!
 
-![opening_gate](img/gate.gif)
-
-
 A very simple animation when the car gate opens, it can be used with any entity, such as a light that turns on/off or any state change of any desired entity
+
+<img src="img/gate.gif" width="30%">
+
 
 <details><summary>On/off animation code</summary>
 
@@ -960,3 +976,5 @@ A very simple animation when the car gate opens, it can be used with any entity,
  ```
 
 </details>
+
+## _________
