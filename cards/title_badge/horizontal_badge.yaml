@@ -1,0 +1,35 @@
+  - type: horizontal-stack
+    cards:
+      - type: custom:button-card
+        name: TITLE
+        styles:
+          card:
+            - background: none
+            - box-shadow: none
+            - padding: 0px 0px 0px 0px
+            - '--mdc-ripple-press-opacity': 0
+          name:
+            - font-size: 28px
+            - color: var(--contrast15)
+            - font-family: Product Sans Medium
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: template
+            icon: mdi:food
+            icon_color: ''
+            content: '{{ states["calendar.calendar"].attributes.message}}'
+            tap_action:
+              action: more-info
+            hold_action:
+              action: none
+            double_tap_action:
+              action: none
+            entity: calendar.calendar
+        alignment: center
+        card_mod:
+          style: |
+            ha-card {
+              font-family: Poppins;
+              --chip-background: var(--contrast18);
+              --primary-text-color: var(--contrast1);
+              }
