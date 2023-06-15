@@ -1044,6 +1044,8 @@ A very simple animation when the car gate opens, it can be used with any entity,
   [Stack in card](https://github.com/custom-cards/stack-in-card)
 
   [Mushroom](https://github.com/piitaya/lovelace-mushroom)
+  
+  [Browser mod](https://github.com/thomasloven/hass-browser_mod)
 
   [Fontawesome](https://github.com/thomasloven/hass-fontawesome)
   
