@@ -1,5 +1,6 @@
- sensor:
- 
+# configuration.yaml
+
+sensor:
 # LIGHTS / ALERTS / SWITCH / etc..
  - platform: template
     sensors:
