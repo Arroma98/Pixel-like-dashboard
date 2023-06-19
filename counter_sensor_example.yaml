@@ -1,0 +1,31 @@
+ sensor:
+ 
+# LIGHTS / ALERTS / SWITCH / etc..
+ - platform: template
+    sensors:
+         lights_on:
+           friendly_name: Lights on
+           unit_of_measurement: ''
+           value_template: >
+             {% set lights = [
+               states.light.living_room,
+               states.switch.bed_light,
+               states.light.outdoor,
+               states.light.sofa_lamp,
+               ] %}
+             {{ lights | selectattr('state','eq','on') | list | count }}
+
+# CLIMATE
+  - platform: template
+    sensors:
+         climate_on:
+           friendly_name: Climate on
+           unit_of_measurement: ''
+           value_template: >
+             {% set climate = [
+               states.climate.thermostat_1,
+               states.climate.thermostat_2,
+               states.climate.mitsubishi_1,
+               states.climate.mitsubishi_2,
+               ] %}
+             {{ climate | selectattr('state','eq','heat') | list | count + climate | selectattr('state','eq','cool') | list | count + climate | selectattr('state','eq','dry') | list | count + climate | selectattr('state','eq','fan_only') | list | count }}
