@@ -1,4 +1,6 @@
-###### Pixel-like-dashboard
+###### *(I'm currently working on a dashboard with the new Google Home UI design, let me know if you're interested!)*
+
+##### Pixel-like-dashboard
 
 ![Dashboard](img/dashboard_all.jpg)
 
