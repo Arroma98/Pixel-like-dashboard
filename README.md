@@ -1,4 +1,4 @@
-###### *(I'm currently working on a dashboard with the new Google Home UI design, let me know if you're interested!)*
+###### *Want a dashboard with the [new google home UI](https://github.com/Arroma98/New-G.Home-UI-Ha-dashboard)?*
 
 ##### Pixel-like-dashboard
 
