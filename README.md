@@ -1033,6 +1033,148 @@ A very simple animation when the car gate opens, it can be used with any entity,
 
 </details>
 
+# Gate card v.2
+
+Use the slider to switch!
+
+<img scr="img/gatev2.jpg" width="50%">
+
+<details><summary>Code</summary>
+  type: horizontal-stack
+  cards:
+    - type: custom:button-card
+      show_name: false
+      icon: mdi:hospital
+      double_tap_action:
+        action: none
+      hold_action:
+        action: navigate
+        navigation_path: /help
+        haptic: heavy
+      tap_action:
+        action: none
+      styles:
+        grid:
+          - grid-template-areas: '"i" "n" "slider"'
+          - grid-template-columns: 1fr
+          - grid-template-rows: 1fr min-content min-content
+        card:
+          - background: var(--red)
+          - height: 100%
+          - width: 70px
+          - '--mdc-ripple-press-opacity': 0
+        img_cell:
+          - justify-self: center
+          - width: 54px
+        icon:
+          - width: 44px
+          - height: 44px
+          - color: var(--black)
+      card_mod:
+        style: |
+          ha-card:active {
+            transform: scale(0.97);
+            transition: 100ms !important;
+            border-radius: 20px;
+            transform-origin: center;
+            }
+    - type: custom:button-card
+      card_mod:
+        style: |
+          ha-card {
+            transition: 300ms !important;
+            }
+      name: GATE
+      icon: mdi:gate
+      show_label: true
+      label: Slide to open
+      entity: switch.gate
+      tap_action:
+        action: none
+      hold_action:
+        action: more-info
+        haptic: light
+      custom_fields:
+        slider:
+          card:
+            type: custom:my-slider-v2
+            entity: '[[[ return entity.entity_id ]]]'
+            styles:
+              container:
+                - background: none
+                - border-radius: 100px
+                - overflow: visible
+              card:
+                - height: 46px
+                - padding: 0px 0px 0px 5px
+                - background: |
+                    [[[
+                      if (entity.state == "on") return "var(--orange)";
+                      if (entity.state == "off") return "var(--contrast0)";
+                      else return "var(--contrast0)";
+                    ]]]
+              track:
+                - overflow: visible
+                - background: none
+              progress:
+                - background: none
+              thumb:
+                - background: |
+                    [[[
+                      if (entity.state == "on") return "var(--yellow)";
+                      if (entity.state == "off") return "var(--blue)";
+                      else return "var(--contrast8)";
+                    ]]]
+                - top: 4px
+                - right: 0px
+                - height: 38px
+                - width: 38px
+                - border-radius: 100px
+      styles:
+        grid:
+          - grid-template-areas: '"i" "n" "l" "slider"'
+          - grid-template-columns: 1fr
+          - grid-template-rows: 1fr min-content min-content
+        card:
+          - background: var(--blue)
+          - padding: 16px
+          - '--mdc-ripple-press-opacity': 0
+          - height: 200px
+        img_cell:
+          - justify-self: start
+          - margin: 50px 0px 0px 0px
+          - width: 24px
+        icon:
+          - width: 24px
+          - height: 24px
+          - color: var(--black)
+        name:
+          - justify-self: start
+          - font-size: 14px
+          - margin: 12px 0 20px 0
+          - color: var(--black)
+          - font-family: Poppins
+        label:
+          - color: var(--black0)
+          - font-size: 14px
+          - margin: '-10px 0px 5px 0px'
+          - font-family: Product Sans Light
+      state:
+        - value: 'on'
+          icon: mdi:gate-open
+          name: Opening..
+          styles:
+            card:
+              - background: var(--yellow)
+              - box-shadow: none
+            icon:
+              - color: var(--black)
+            name:
+              - color: var(--black)
+            label:
+              - color: transparent
+</details>
+
 ### _________
 
 <details><summary>Credits</summary>
