@@ -1037,7 +1037,7 @@ A very simple animation when the car gate opens, it can be used with any entity,
 
 Use the slider to switch!
 
-<img scr="img/gatev2.jpg" width="50%">
+<img src="img/gatev2.jpg" width="50%">
 
 <details><summary>Code</summary>
   type: horizontal-stack
