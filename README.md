@@ -1040,6 +1040,8 @@ Use the slider to switch!
 <img src="img/gatev2.jpg" width="50%">
 
 <details><summary>Code</summary>
+  
+```
   type: horizontal-stack
   cards:
     - type: custom:button-card
@@ -1173,6 +1175,8 @@ Use the slider to switch!
               - color: var(--black)
             label:
               - color: transparent
+```
+
 </details>
 
 ### _________
