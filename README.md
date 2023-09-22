@@ -1,5 +1,9 @@
 ###### *Want a dashboard with the [new google home UI](https://github.com/Arroma98/New-G.Home-UI-Ha-dashboard)?*
 
+Since I got a lot of love for my dashboard in the [forum](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/190) _(thanks!)_, here's how I made it.
+
+_If you have difficulty open an **issue**._
+
 ##### Pixel-like-dashboard
 
 ![Dashboard](img/dashboard_all.jpg)
@@ -10,7 +14,6 @@ This is an “Android 13 Pixel-like” dashboard based on [Rounded Dashboard by 
 ###### NB.2 - What I did is put together cards found in the [forum](https://community.home-assistant.io/latest), modifying some more and some less, aiming to mix it all up to make pixel rom design in my home assistant dashboard.
 
 
-### _________
 
 
 # theme.yaml
@@ -192,13 +195,14 @@ It has to look like the pixel interface, so we need to use the exact **colors** 
   
   </details>
 
-### _________
+____
 
 ### Let's start with the dashboard:
 
 ###### _These are examples of the main cards that I use in my dashboard, in the "cards" folder you will also find the codes of other cards._
 
 <img src="img/header2.jpg" width="70%">
+
 
 # Pill
 A good way to keep track of the garbage calendar, home alarm and current energy consumption
@@ -427,7 +431,7 @@ A good way to keep track of the garbage calendar, home alarm and current energy 
     
 </details>
 
-### _________
+_____
 
 # Counter sensors
 Very useful because it shows at a glance the entities that are on, clicking on it opens a popup showing all the entities of that category.
@@ -561,7 +565,7 @@ I made a bigger box for important alerts.
   
 </details>
 
-### _________
+_____
 
 # Panel
 Now we have to recreate the famous notification panel that Google has created since Android 12.
@@ -744,7 +748,7 @@ The ```type: custom:gap-card``` will be placed both at the beginning and at the 
   ```
 </details>
 
-### _________
+_____
 
 # Title and graph
 
@@ -906,7 +910,7 @@ In the titles I use ```font-family: Poppins``` because I like it, but you can us
 
 </details>
 
-### _________
+_____
 
 # Person
 
@@ -953,9 +957,7 @@ Here I use mushroom chips cards with card_mod.
   
 </details>
 
-
-
-### _________
+_____
 
 # Something else -  animations!
 
@@ -1032,6 +1034,8 @@ A very simple animation when the car gate opens, it can be used with any entity,
  ```
 
 </details>
+
+____
 
 # Gate card v.2
 
@@ -1179,7 +1183,6 @@ Use the slider to switch!
 
 </details>
 
-### _________
 
 <details><summary>Credits</summary>
   
