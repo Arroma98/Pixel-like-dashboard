@@ -1,8 +1,8 @@
 ###### *Want a dashboard with the [new google home UI](https://github.com/Arroma98/New-G.Home-UI-Ha-dashboard)?*
 
-Since I got a lot of love for my dashboard in the [forum](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/190) _(thanks!)_, here's how I made it.
+Having received particular interest in the [forum](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/190), here's how I made my dashboard.
 
-_If you have difficulty open an **issue**._
+_If you have any difficulty open an **issue**._
 
 ##### Pixel-like-dashboard
 
