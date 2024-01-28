@@ -1,4 +1,4 @@
-###### *Want a dashboard with the [new google home UI](https://github.com/Arroma98/New-G.Home-UI-Ha-dashboard)?*
+###### *Want a dashboard with a [minimal UI]([https://github.com/Arroma98/New-G.Home-UI-Ha-dashboard](https://github.com/Arroma98/Minimal-HA/blob/main/README.md))?*
 
 Having received particular interest in the [forum](https://community.home-assistant.io/t/rounded-dashboard-guide/543043/190), here's how I made my dashboard.
 
