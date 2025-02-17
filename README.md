@@ -1200,6 +1200,6 @@ Use the slider to switch!
 
   [Fontawesome](https://github.com/thomasloven/hass-fontawesome)
   
-  All the people in the forum publish their ideas and work.
+  All the people in the forum that publish their ideas and work.
 
 </details>
